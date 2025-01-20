@@ -24,7 +24,11 @@ public class Game implements Serializable {
     private String platforms;
     private Double score;
     private String imgUrl;
+
+    @Column(columnDefinition = "TEXT")// anotação serve para especificar que o campo não tera apenas 255 caracteres. (limite do varchar)
     private String shortDescription;
+
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
     public Game() {
