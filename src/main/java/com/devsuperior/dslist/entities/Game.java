@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -30,6 +32,9 @@ public class Game implements Serializable {
 
     @Column(columnDefinition = "TEXT")
     private String longDescription;
+
+    @ManyToMany
+    private List<GameList> gameList = new ArrayList<>();
 
     public Game() {
     }
