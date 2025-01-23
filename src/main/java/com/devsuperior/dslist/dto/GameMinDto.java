@@ -3,10 +3,12 @@ package com.devsuperior.dslist.dto;
 
 
 import com.devsuperior.dslist.entities.Game;
+import com.devsuperior.dslist.projections.GameMinProjection;
 
 import java.io.Serial;
+import java.io.Serializable;
 
-public class GameMinDto {
+public class GameMinDto implements Serializable {
     @Serial
     private static final long serialVersionUID = -6698884165491056621L;
 
@@ -19,12 +21,19 @@ public class GameMinDto {
     public GameMinDto() {
     }
 
-    public GameMinDto(Game o) {
-        id = o.getId();
-        title = o.getTitle();
-        year = o.getYear();
-        imgUrl = o.getImgUrl();
-        shortDescription = o.getShortDescription();
+    public GameMinDto(Game entity) {
+        id = entity.getId();
+        title = entity.getTitle();
+        year = entity.getYear();
+        imgUrl = entity.getImgUrl();
+        shortDescription = entity.getShortDescription();
+    }
+    public GameMinDto(GameMinProjection entityProjection) {
+        id = entityProjection.getId();
+        title = entityProjection.getTitle();
+        year = entityProjection.getYear();
+        imgUrl = entityProjection.getImgUrl();
+        shortDescription = entityProjection.getShortDescription();
     }
 
     /// CLasses Dto só precisam de getters
