@@ -9,8 +9,10 @@ public class BelongingPK {
     /// Classe Auxiliar, para representar uma chave primaria dupla. Pois temos o modelo de repositories,que não aceita 2 Ids.
 
     @ManyToOne
-    @JoinColumn(name = "game_id")
+    @JoinColumn(name = "game_id") //nome da chave estrangeira
     private Game game;
+
+    @ManyToOne
     @JoinColumn(name = "list_id")
     private GameList list;
 

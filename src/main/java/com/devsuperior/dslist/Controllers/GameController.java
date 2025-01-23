@@ -21,4 +21,5 @@ public class GameController {
         List<GameMinDto> list = gameService.findAll();
         return list;
     }
+
 }

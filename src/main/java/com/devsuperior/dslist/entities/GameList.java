@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
+@Table(name = "tb_game_list")
 public class GameList implements Serializable {
     @Serial
     private static final long serialVersionUID = 6228686944038664589L;
@@ -17,7 +18,6 @@ public class GameList implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-
 
 
     public GameList() {
