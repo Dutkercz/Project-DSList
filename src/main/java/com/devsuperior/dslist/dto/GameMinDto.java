@@ -31,7 +31,7 @@ public class GameMinDto implements Serializable {
     public GameMinDto(GameMinProjection entityProjection) {
         id = entityProjection.getId();
         title = entityProjection.getTitle();
-        year = entityProjection.getYear();
+        year = entityProjection.getGameYear();
         imgUrl = entityProjection.getImgUrl();
         shortDescription = entityProjection.getShortDescription();
     }
